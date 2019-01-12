@@ -9,6 +9,9 @@ namespace Assignment2
 {
     class circle : Shape
     {
+        int x;
+        int y;
+        int z;
         public override double calcArea()
         {
             throw new NotImplementedException();
@@ -19,9 +22,12 @@ namespace Assignment2
             throw new NotImplementedException();
         }
 
-        public override void draw(Graphics g)
+        public override void draw(Graphics g,int[] store)
         {
-            throw new NotImplementedException();
+            Pen p = new Pen(Color.Black, 2);
+            x = store[0];
+            y = store[1];
+            g.DrawEllipse(p, x, y,x,y);
         }
     }
 }

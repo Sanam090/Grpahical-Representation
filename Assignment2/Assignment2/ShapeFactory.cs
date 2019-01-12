@@ -13,7 +13,12 @@ namespace Assignment2
             shapeType = shapeType.ToUpper().Trim(); //you could argue that you want a specific word string to create an object but I'm allowing any case combination
 
 
-            if (shapeType.Equals("RECTANGLE"))
+            if (shapeType.Equals("circle", StringComparison.OrdinalIgnoreCase))
+            {
+                return new circle();
+
+            }
+           else if (shapeType.Equals("rectangle", StringComparison.OrdinalIgnoreCase))
             {
                 return new Rectangle();
 

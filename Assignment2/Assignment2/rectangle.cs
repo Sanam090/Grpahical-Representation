@@ -34,12 +34,12 @@ namespace Assignment2
 
         }
 
-        public override void draw(Graphics g)
+        public override void draw(Graphics g,int[] store)
         {
             Pen p = new Pen(Color.Black, 2);
-            SolidBrush b = new SolidBrush(colour);
-            g.FillRectangle(b, x, y, width, height);
-            g.DrawRectangle(p, x, y, width, height);
+            x = store[0];
+            y = store[1];
+            g.DrawRectangle(p,x,y,x,y);
         }
 
         public override double calcArea()

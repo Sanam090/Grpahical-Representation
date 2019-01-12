@@ -29,7 +29,7 @@ namespace Assignment2
 
             //the three methods below are from the Shapes interface
             //here we are passing on the obligation to implement them to the derived classes by declaring them as abstract
-            public abstract void draw(Graphics g);
+            public abstract void draw(Graphics g,int[] store);
             public abstract double calcArea();
             public abstract double calcPerimeter();
 

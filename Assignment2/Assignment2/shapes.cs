@@ -10,7 +10,7 @@ namespace Assignment2
     interface shapes
     {
         void set(Color c, params int[] list);
-        void draw(Graphics g);
+        void draw(Graphics g,int[] store);
         double calcArea();
         double calcPerimeter();
 
