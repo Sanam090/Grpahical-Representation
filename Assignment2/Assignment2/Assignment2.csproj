@@ -47,6 +47,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="circle.cs" />
+    <Compile Include="polygon.cs" />
     <Compile Include="rectangle.cs" />
     <Compile Include="shape.cs" />
     <Compile Include="Form1.cs">

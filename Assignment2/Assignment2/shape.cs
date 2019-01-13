@@ -17,10 +17,8 @@ namespace Assignment2
                 x = y = 100;
             }
 
-
             public Shape(Color colour, int x, int y)
             {
-
                 this.colour = colour; //shape's colour
                 this.x = x; //its x pos
                 this.y = y; //its y pos
@@ -29,7 +27,7 @@ namespace Assignment2
 
             //the three methods below are from the Shapes interface
             //here we are passing on the obligation to implement them to the derived classes by declaring them as abstract
-            public abstract void draw(Graphics g,int[] store);
+            public abstract void draw(Graphics g,string[] store,int i);
             public abstract double calcArea();
             public abstract double calcPerimeter();
 
@@ -43,11 +41,9 @@ namespace Assignment2
                 this.y = list[1];
             }
 
-
             public override string ToString()
             {
                 return base.ToString() + "    " + this.x + "," + this.y + " : ";
             }
-
         }
     }

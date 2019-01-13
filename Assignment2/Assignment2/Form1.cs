@@ -18,6 +18,8 @@ namespace Assignment2
         String[] line;
         String[] value;
         public int[] par = new int[4];
+        public int[] par3 = new int[10];
+        public int[] par2 = new int[6];
         public Form1()
         {
             InitializeComponent();
@@ -67,7 +69,7 @@ namespace Assignment2
 
         private void panel1_Paint_1(object sender, PaintEventArgs e)
         {
-            for (int i = 0; i < edit.Lines.Length-1; i++)//counting length of program
+            for (int i = 0; i < edit.Lines.Length; i++)//counting length of program
             {
                 //stored counted length in string
                 line = edit.Lines;
@@ -75,34 +77,22 @@ namespace Assignment2
                 if (value[0].Equals("DrawTo", StringComparison.OrdinalIgnoreCase))  //parsing the command
                 {
                     //rectangle
-                  par[0] = Convert.ToInt32(value[1]);
+                   par[0] = Convert.ToInt32(value[1]);
                    par[1] = Convert.ToInt32(value[2]);
-                    MessageBox.Show("" + par[0]);
-                    MessageBox.Show("" + par[1]);
-
-
+                   MessageBox.Show("" + par[0]);
+                   MessageBox.Show("" + par[1]);
                 }
                else if (value[0].Equals("Circle", StringComparison.OrdinalIgnoreCase))  //parsing the command
-                {
+               {
                     //circle
                     Shape sh = sp.getShape("Circle");
                     par[0] = Convert.ToInt32(value[1]);
                     par[1] = Convert.ToInt32(value[2]);
                     MessageBox.Show("" + par[0]);
                     MessageBox.Show("" + par[1]);
-                    sh.draw(e.Graphics,par);
-                   
+                    sh.draw(e.Graphics,value,i);
                 }
-                else if (value[0].Equals("Triangle", StringComparison.OrdinalIgnoreCase))  //parsing the command
-                {
-                    //rectangle
-
-
-                    par[0] = Convert.ToInt32(value[1]);
-                    par[1] = Convert.ToInt32(value[2]);
-                    MessageBox.Show("" + par[0]);
-                    MessageBox.Show("" + par[1]);
-                }
+              
                 else if (value[0].Equals("Rectangle", StringComparison.OrdinalIgnoreCase))  //parsing the command
                 {
                     //rectangle
@@ -112,18 +102,40 @@ namespace Assignment2
                     par[1] = Convert.ToInt32(value[2]);
                     MessageBox.Show("" + par[0]);
                     MessageBox.Show("" + par[1]);
-                    sh.draw(e.Graphics, par);
+                    sh.draw(e.Graphics, value,i);
                 }
                 else if (value[0].Equals("Triangle", StringComparison.OrdinalIgnoreCase))  //parsing the command
                 {
                     //Triangle
                     Shape sh = sp.getShape("Triangle");
+                    
+                    par2[0] = Convert.ToInt32(value[1]);
+                    par2[1] = Convert.ToInt32(value[2]);
+                    par2[2] = Convert.ToInt32(value[3]);
+                    par2[3] = Convert.ToInt32(value[4]);
+                    par2[4] = Convert.ToInt32(value[5]);
+                    par2[5] = Convert.ToInt32(value[6]);
+                    MessageBox.Show("" + par2[0]);
+                    MessageBox.Show("" + par2[1]);
+                    sh.draw(e.Graphics, value,i);
+                }
+                else if (value[0].Equals("Polygon", StringComparison.OrdinalIgnoreCase))  //parsing the command
+                {
+                    //Triangle
+                    Shape sh = sp.getShape("Polygon");
 
-                    par[0] = Convert.ToInt32(value[1]);
-                    par[1] = Convert.ToInt32(value[2]);
-                    MessageBox.Show("" + par[0]);
-                    MessageBox.Show("" + par[1]);
-                    sh.draw(e.Graphics, par);
+                    par3[0] = Convert.ToInt32(value[1]);
+                    par3[1] = Convert.ToInt32(value[2]);
+                    par3[2] = Convert.ToInt32(value[3]);
+                    par3[3] = Convert.ToInt32(value[4]);
+                    par3[4] = Convert.ToInt32(value[5]);
+                    par3[5] = Convert.ToInt32(value[6]);
+                    par3[6] = Convert.ToInt32(value[7]);
+                    par3[7] = Convert.ToInt32(value[8]);
+                   
+                    MessageBox.Show("" + par3[0]);
+                    MessageBox.Show("" + par3[1]);
+                    sh.draw(e.Graphics, value,i);
                 }
             }
 

@@ -23,6 +23,16 @@ namespace Assignment2
                 return new Rectangle();
 
             }
+            else if (shapeType.Equals("triangle", StringComparison.OrdinalIgnoreCase))
+            {
+                return new triangle();
+
+            }
+            else if (shapeType.Equals("polygon", StringComparison.OrdinalIgnoreCase))
+            {
+                return new polygon();
+
+            }
             else
             {
                 //if we get here then what has been passed in is unknown so throw an appropriate exception
