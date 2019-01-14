@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Drawing;
 using System.Linq;
@@ -7,12 +8,19 @@ using System.Threading.Tasks;
 
 namespace Assignment2
 {
+    /// <summary>
+    /// Rectangle class has been created which is inheritance from shape class
+    /// paramater take and create shape
+    /// The Hashtable class represents a collection of key-and-value pairs that 
+    ///  are organized based on the hash code of the key.
+    /// </summary>
     class circle : Shape
     {
         String hashvalue;
         int x;
         int y;
-        int z;
+        int a;
+        int b;
         public override double calcArea()
         {
             throw new NotImplementedException();
@@ -22,15 +30,50 @@ namespace Assignment2
         {
             throw new NotImplementedException();
         }
+        /// <summary>
+        /// The Hashtable class represents a collection of key-and-value pairs that 
+        ///  are organized based on the hash code of the key.
+        /// </summary>
+        /// <param name="g"></param>
+        /// <param name="store"></param>
+        /// <param name="i"></param>
+        /// <param name="hash"></param>
 
-        public override void draw(Graphics g,string[] store,int i)
+        public override void draw(Graphics g,string[] store,int i,Hashtable hash)
         {
             Pen p = new Pen(Color.Black, 2);
-            x = Int32.Parse(store[1]);
-            y = Int32.Parse(store[2]);
-            int a = Int32.Parse(store[3]);
-            int b = Int32.Parse(store[4]);
-
+            try
+            {
+                x = Int32.Parse(hash[store[1]]+"");             //storing value
+            }
+            catch (Exception ex)
+            {
+                x = Int32.Parse(store[1]);
+            }
+            try
+            {
+                y = Int32.Parse(hash[store[2]] + "");
+            }
+            catch (Exception ex)
+            {
+                y = Int32.Parse(store[2]);
+            }
+            try
+            {
+                a = Int32.Parse(hash[store[3]] + "");
+            }
+            catch (Exception ex)
+            {
+                a = Int32.Parse(store[3]);
+            }
+            try
+            {
+                b = Int32.Parse(hash[store[4]] + "");
+            }
+            catch (Exception ex)
+            {
+                b = Int32.Parse(store[4]);
+            }
             if (store.Length == 5)
             {
                 g.DrawEllipse(p, x, y, a, b);

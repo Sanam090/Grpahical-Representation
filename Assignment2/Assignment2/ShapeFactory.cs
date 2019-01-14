@@ -6,6 +6,10 @@ using System.Threading.Tasks;
 
 namespace Assignment2
 {
+    /// <summary>
+    /// ShapeFactory class has created
+    ///  A factory creates objects. We implement the factory design pattern in a C# program
+    /// </summary>
     class ShapeFactory
     {
         public Shape getShape(String shapeType)

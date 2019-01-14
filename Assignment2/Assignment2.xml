@@ -1,0 +1,166 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Assignment2</name>
+    </assembly>
+    <members>
+        <member name="T:Assignment2.circle">
+            <summary>
+            Rectangle class has been created which is inheritance from shape class
+            paramater take and create shape
+            The Hashtable class represents a collection of key-and-value pairs that 
+             are organized based on the hash code of the key.
+            </summary>
+        </member>
+        <member name="M:Assignment2.circle.draw(System.Drawing.Graphics,System.String[],System.Int32,System.Collections.Hashtable)">
+            <summary>
+            The Hashtable class represents a collection of key-and-value pairs that 
+             are organized based on the hash code of the key.
+            </summary>
+            <param name="g"></param>
+            <param name="store"></param>
+            <param name="i"></param>
+            <param name="hash"></param>
+        </member>
+        <member name="F:Assignment2.paint.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:Assignment2.paint.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:Assignment2.paint.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:Assignment2.Rectangle">
+            <summary>
+            Rectangle class has been created which is inheritance from shape class
+            paramater take and create shape
+            </summary>
+        </member>
+        <member name="M:Assignment2.Rectangle.draw(System.Drawing.Graphics,System.String[],System.Int32,System.Collections.Hashtable)">
+            <summary>
+            parameterize method has been created
+            set color in the line usin pen libary 
+            </summary>
+            <param name="g"></param>
+            <param name="store"></param>
+            <param name="i"></param>
+            <param name="hash"></param>
+        </member>
+        <member name="T:Assignment2.Shape">
+            <summary>
+            Shape class has created which is inheritance with shapes class
+            color code 
+            </summary>
+        </member>
+        <!-- Badly formed XML comment ignored for member "T:Assignment2.Form1" -->
+        <member name="M:Assignment2.Form1.#ctor">
+            <summary>
+            this is the constructor
+            </summary>
+        </member>
+        <member name="M:Assignment2.Form1.openToolStripMenuItem_Click(System.Object,System.EventArgs)">
+            <summary>
+            this is the method to open read and write the file
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Assignment2.Form1.panel1_Paint_1(System.Object,System.Windows.Forms.PaintEventArgs)">
+            <summary>
+            this is the method which is used to take the
+            value of loop and pass to next method
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Assignment2.Form1.check(System.Windows.Forms.PaintEventArgs,System.String[],System.Int32)">
+             <summary>
+             this is the method which check the
+             value pass by user and create shape as per the user command
+            
+             </summary>
+             <param name="e"></param>
+             <param name="value"></param>
+             <param name="i"></param>
+        </member>
+        <member name="F:Assignment2.Form1.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:Assignment2.Form1.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:Assignment2.Form1.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="M:Assignment2.Program.Main">
+            <summary>
+            The main entry point for the application.
+            </summary>
+        </member>
+        <member name="T:Assignment2.ShapeFactory">
+            <summary>
+            ShapeFactory class has created
+             A factory creates objects. We implement the factory design pattern in a C# program
+            </summary>
+        </member>
+        <member name="T:Assignment2.shapes">
+            <summary>
+            shapes interface is created
+            diferent method has been called in this interface
+            </summary>
+        </member>
+        <member name="T:Assignment2.triangle">
+            <summary>
+            triangle class has been created which is inheritance from shape class
+            paramater take and create shape
+            The Hashtable class represents a collection of key-and-value pairs that 
+             are organized based on the hash code of the key.
+            </summary>
+        </member>
+        <member name="M:Assignment2.triangle.draw(System.Drawing.Graphics,System.String[],System.Int32,System.Collections.Hashtable)">
+            <summary>
+            / parameterize method has been created
+            set color in the line usin pen libary 
+            The Hashtable class represents a collection of key-and-value pairs that 
+             are organized based on the hash code of the key.
+            </summary>
+            <param name="g"></param>
+            <param name="store"></param>
+            <param name="i"></param>
+            <param name="hash"></param>
+        </member>
+        <member name="T:Assignment2.Properties.Resources">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:Assignment2.Properties.Resources.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:Assignment2.Properties.Resources.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+    </members>
+</doc>

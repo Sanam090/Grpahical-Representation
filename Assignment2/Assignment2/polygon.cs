@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Drawing;
 using System.Linq;
@@ -19,14 +20,47 @@ namespace Assignment2
             throw new NotImplementedException();
         }
 
-        public override void draw(Graphics g, string[] store,int i)
+        public override void draw(Graphics g, string[] store,int i,Hashtable hash)
         {
             Pen p = new Pen(Color.Black, 2);
             Point[] po = new Point[5];
-            po[0] = new Point(Int32.Parse(store[1]), Int32.Parse(store[2]));
-            po[1] = new Point(Int32.Parse(store[3]), Int32.Parse(store[4]));
-            po[2] = new Point(Int32.Parse(store[5]), Int32.Parse(store[6]));
-            po[3] = new Point(Int32.Parse(store[7]), Int32.Parse(store[8]));
+            try
+            {
+                po[0] = new Point(Int32.Parse(hash[store[1]] + ""), Int32.Parse(hash[store[2]] + ""));
+            }
+            catch (Exception ex)
+            {
+                po[0] = new Point(Int32.Parse(store[1]), Int32.Parse(store[2]));
+
+            }
+            try
+            {
+                po[1] = new Point(Int32.Parse(hash[store[3]] + ""), Int32.Parse(hash[store[4]] + ""));
+            }
+            catch (Exception ex)
+            {
+                po[1] = new Point(Int32.Parse(store[3]), Int32.Parse(store[4]));
+
+            }
+            try
+            {
+                po[2] = new Point(Int32.Parse(hash[store[5]] + ""), Int32.Parse(hash[store[6]] + ""));
+            }
+            catch (Exception ex)
+            {
+                po[2] = new Point(Int32.Parse(store[5]), Int32.Parse(store[6]));
+
+            }
+            try
+            {
+                po[3] = new Point(Int32.Parse(hash[store[7]] + ""), Int32.Parse(hash[store[8]] + ""));
+            }
+            catch (Exception ex)
+            {
+                po[3] = new Point(Int32.Parse(store[7]), Int32.Parse(store[8]));
+
+            }
+           
             if (store.Length == 9)
             {
                 g.DrawPolygon(p, po);
